@@ -1,7 +1,7 @@
 # Albaum
 
 ## What
-Albaum is a digital assistant of sorts. Kind of like a todo list, sort of like a wiki; but different.
+Albaum is kind of like a todo list, sort of like a wiki, a bit like Google; but different.
 
 ## Why
 I had an itch to scratch, the itch of not finding a good place to put my todo lists, diaries, notes, links, passwords and other stuff I want to keep track of.
