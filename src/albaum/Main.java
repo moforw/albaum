@@ -12,6 +12,9 @@
 
 package albaum;
 
+//TODO add mac/windows jars, export & publish
+///TODO resolve github issue
+
 //TODO add tiling interface
 ///TODO auto adjust nr of cols in global grid layout
 ///TODO add tile class
