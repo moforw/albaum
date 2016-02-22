@@ -72,11 +72,12 @@ public class Fact implements Comparable<Fact>, HasKey {
 		
 		final JsonValue pv = o.get("previousVersion");
 		
-		previousVersion = (pv == JsonValue.NULL) 
+		previousVersion = (pv == null || pv == JsonValue.NULL) 
 			? null 
 			: new Fact(o.getJsonObject("previousVersion"), cx);
 		
-		version = o.getInt("version");
+		final JsonValue vv = o.get("version");
+		version = (vv == null) ? 1 : o.getInt("version");
 	}
 
 	public Fact clone(final String k) {
