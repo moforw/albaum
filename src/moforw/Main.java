@@ -12,9 +12,6 @@
 
 package moforw;
 
-//TODO disable recursive storage of previousVersion
-///TODO only store one previousVersion
-
 //TODO add tiling interface
 ///TODO auto adjust nr of cols in global grid layout
 ///TODO add tile class
