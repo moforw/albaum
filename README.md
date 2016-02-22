@@ -4,7 +4,7 @@
 Albaum is a digital assistant of sorts. Kind of like a todo list, sort of like a wiki; but different.
 
 ## Why
-I had an itch to scratch, the itch of not finding a todo software that lives up to it's potential.
+I had an itch to scratch, the itch of not finding a good place to put my todo lists, diaries, notes, links, passwords and other stuff I want to keep track of.
 
 ## How
 You currently need to run a 64 bit Linux and have Java 8 installed to run Albaum. More platforms will be added as soon as I manage to find a sane way of doing multi platform Java builds. javax.swing deserves to die, I'd rather poke my eyes out and eat them; so SWT it is. Download [Albaum.jar](https://github.com/moforw/albaum/blob/master/Albaum.jar?raw=true), put it in it's own folder somewhere and launch it. If right/double clicking it doesn't work, launching from a shell with 'java -jar Albaum.jar' will give you an error message describing the reason.
