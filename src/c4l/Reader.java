@@ -1,4 +1,4 @@
-package moforw;
+package c4l;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;

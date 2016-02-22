@@ -8,20 +8,20 @@
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
-*/
+ */
 
-package moforw;
+package c4l;
 
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.custom.StyledText;
-import org.eclipse.swt.widgets.Composite;
+import java.time.Instant;
 
-//SWT docs says StyledText is not intented to be subclassed;
-//I'll subclass whatever I feel like, thank you very much.
+public final class Albaum {
+	public static final Instant nullTime = Instant.ofEpochMilli(0);
 
-public class KeyText extends StyledText {
-	public KeyText(Composite parent, int style) {
-		super(parent, SWT.MULTI | style);
-		setWordWrap(true);
+	public static final int VERSION[] = {1, 0, 1};
+	
+	public static int version() {
+	    return VERSION[0] * 100 + VERSION[1] * 10 + VERSION[2];
 	}
+	
+	private Albaum() { }
 }

@@ -8,20 +8,10 @@
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
- */
+*/
 
-package moforw;
+package c4l;
 
-import java.time.Instant;
-
-public final class Albaum {
-	public static final Instant nullTime = Instant.ofEpochMilli(0);
-
-	public static final int VERSION[] = {1, 0, 1};
-	
-	public static int version() {
-	    return VERSION[0] * 100 + VERSION[1] * 10 + VERSION[2];
-	}
-	
-	private Albaum() { }
+public interface HasKey {
+	String key();
 }
