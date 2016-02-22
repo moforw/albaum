@@ -1,10 +1,10 @@
 # Albaum
 
 ## What
-Albaum is a digital assistant of sorts. Kind of like a todo list, kind of like a wiki; but different.
+Albaum is a digital assistant of sorts. Kind of like a todo list, sort of like a wiki; but different.
 
 ## Why
-I had an itch to scratch, the itch of not finding a todo/wiki software that lives up to it's potential. And a couple of software/user interface ideas that I wanted to try out.
+I had an itch to scratch, the itch of not finding a todo software that lives up to it's potential.
 
 ## How
 You currently need to run a 64 bit Linux and have Java 8 installed to run Albaum. More platforms will be added as soon as I manage to find a sane way of doing multi platform Java builds. javax.swing deserves to die, I'd rather poke my eyes out and eat them; so SWT it is. Download [Albaum.jar](https://github.com/moforw/albaum/blob/master/Albaum.jar?raw=true), put it in it's own folder somewhere and launch it. If right/double clicking it doesn't work, launching from a shell with 'java -jar Albaum.jar' will give you an error message describing the reason.
@@ -19,7 +19,7 @@ The reader updates the tree viewer periodically when the input changes. The inpu
 The tree viewer shows the part of the tree that matches the current (uncompleted) input. Facts are scored by nr of links and grouped when appropriate. Facts can be edited by pressing Enter or double clicking in the tree, Ctrl|S saves changes and Escape discards them. The editor is auto completed like the Reader. Ctrl|A selects all facts in tree, Ctrl|N none; Ctrl|D deletes selection.
 
 #### Pinning
-Facts can be pinned by checking the checkboxes next to the tree items. Pinned facts stay in the tree even if they don't match the current input. Ctrl|P pins selection, Ctrl|U unpins.
+Facts can be pinned by checking the checkbox next to the item. Pinned facts stay in the tree until unpinned, regardless of current reader input. Ctrl|P pins selection, Ctrl|U unpins.
 
 ### Flash Viewer
 The flash viewer is periodically updated to view a random #flash fact.
@@ -37,7 +37,7 @@ Word indexing can be temporarily disabled by putting part of the fact inside dou
 Tags are identifiers within facts prefixed with '#' that get special treatment.
 
 ### at
-All facts are automatically registered at the key '#at YYYY-MM-DD ...', where YYYY-MM-DD represents the time of creation; for easy filtering. Enter '#at 2015-12-31 2' in reader to display all facts entered during the last hours of 2015.
+All facts are automatically indexed at the key '#at [time]', where [time] represents the time of creation; for easy filtering.
 
 ### todo/done
 Whenever a fact containg a #done tag is stored, all matching #todo tags are converted to #done. If more than one #todo is converted, an additional #done fact is created for the entire operation.
@@ -54,7 +54,7 @@ Displays a message next to the window title, store '#caption whatever' to change
 Sets the font, store '#font Arial' to change the font to 'Arial'.
 
 ### font-size
-Sets the basic font, store '#font-size 12' to change the font size to 12. Use Ctrl|+ / Ctrl|- to increase/decrease size. 
+Sets the basic font, all font sizes are calculated from this offset. Store '#font-size 12' to set the font size offset to 12. You can use Ctrl|+ / Ctrl|- to increase/decrease. 
 
 ### time-format
-Sets the time format used for converting time stamps to/from strings. Storing "#time-format MM/dd/yyyy hh:mm a" gives you US style dates.
+Sets the time format used for converting time stamps to/from strings. This affects #at-indexing. Storing "#time-format MM/dd/yyyy hh:mm a" gives you US style time stamps.

@@ -12,9 +12,8 @@
 
 package moforw;
 
-//TODO move todo's to C4L Albaum
-
-//TODO --- v100 ---
+//TODO disable recursive storage of previousVersion
+///TODO only store one previousVersion
 
 //TODO add tiling interface
 ///TODO auto adjust nr of cols in global grid layout
@@ -35,10 +34,6 @@ package moforw;
 
 //TODO extract StoreButton from GUI
 
-//TODO add ItemEditor class
-///TODO copy code from readerPanel
-///TODO add Cancel button
-
 //TODO add Edit tile
 ///TODO add edit selection short cut (ctrl|e)
 ///TODO extract ReaderPanel class with buttons from GUI
@@ -49,18 +44,10 @@ package moforw;
 ///TODO add support for ctrl|i / ctrl|d in list
 
 //TODO add undo facility
-///TODO add label param to Context.commit()
-///TODO add undo view
-////TODO show commits in tree
 ///TODO ctrl|z to move up
 ///TODO fill stack while moving up, use to move down
 ////TODO clear on committ
 ////TODO ctrl|r to move down
-
-//TODO add #show-score setting
-//TODO set to false default
-//TODO add 'Show Scores' item to View menu
-///TODO update tries
 
 //TODO add coloring support
 ///TODO 5 colors, green, yellow, red, blue & black
@@ -83,33 +70,12 @@ package moforw;
 /////TODO 'maestro card pin #secret NNNN'
 ////TODO otherwise filter '#secret'
 ///TODO show secrets when editing item
-///TODO don't register #secret or the following key in trie
+///TODO don't index #secret or the following key
 
 //TODO add stemming of non-# keys
 ///TODO snowball2? other java implementations?
 
 //TODO compress log file
-
-//TODO add #my specials
-///TODO add '-' to Key.SPLIT
-///TODO add String Fact.value(), filter #secret
-///TODO add '#my-name X'
-///TODO add '#my-email X'
-///TODO add '#my-email-password X'
-///TODO add '#my-smtp-host X'
-///TODO add '#my-smtp-port X'
-///TODO add '#my-imap-host X'
-///TODO add '#my-imap-port X'
-///TODO add empty settings for completion in Log.init
-
-//TODO add key specials
-///TODO add '#my public-key X' special
-///TODO add '#my private-key X' special
-///TODO generate and commit on trie.load if not exists
-
-//TODO add Trie.SECRETS
-///TODO add '#my-email-password & #private-key"
-///TODO automatically insert #secret if not exists
 
 //TODO add system password
 ///TODO store pbkdf2 hash in tree
@@ -125,13 +91,6 @@ package moforw;
 //TODO add import function
 ///TODO separate import dialog
 ////TODO field for prefix to add to imported facts
-
-//TODO add ability to send selection via email
-///TODO useful for shopping lists etc
-
-//TODO add publish/subscribe of key spaces via email
-///TODO add prefix option on publish and subscribe
-///TODO remove if found in key
 
 public class Main {		
 	public static void main(final String[] args) {
