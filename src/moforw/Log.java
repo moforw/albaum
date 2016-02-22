@@ -37,7 +37,7 @@ public class Log {
 		filePath = p;
 		
 		if (!p.toFile().isFile()) {
-			initFact("#caption Not your mother's wiki");
+			initFact("#caption Not your mother's todo list");
 			initFact("#done ");
 			initFact("#flash ");
 			initFact("#font DejaVu Sans Mono");
@@ -47,7 +47,7 @@ public class Log {
 		}
 	}
 	
-	public void commitFact(final Fact f, final Change.Type ct, final JsonGenerator json) {		
+	public void commitFact(final Fact f, final Change.Type ct, final JsonGenerator json, final boolean recursive) {		
 		json
 			.write("key", f.key)
 			.write("createdAt", context.formatJS(f.createdAt))
@@ -60,12 +60,11 @@ public class Log {
 				break;
 			}			
 			case INSERT: {
-				if (f.previousVersion == null) {
+				if (!recursive || f.previousVersion == null) {
 					json.writeNull("previousVersion");
-				}
-				if (f.previousVersion != null) {
+				} else {
 					json.writeStartObject("previousVersion");
-					commitFact(f.previousVersion, ct, json);
+					commitFact(f.previousVersion, ct, json, false);
 					json.writeEnd();
 				}
 				break;
@@ -85,7 +84,7 @@ public class Log {
 
 		try(JsonGenerator json = Json.createGenerator(fw)) {
 			json.writeStartObject();
-			commitFact(f, ct, json);
+			commitFact(f, ct, json, true);
 			json.writeEnd();
 			
 			try {
