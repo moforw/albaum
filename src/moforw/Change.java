@@ -26,8 +26,6 @@ public abstract class Change {
 	}
 	
 	public void commit() {
-		onCommit();
-
 		if (node.key.compareToIgnoreCase(Key.strip(fact.key)) == 0) {
 			node.trie.commitFact(fact, type);
 		}
@@ -37,17 +35,11 @@ public abstract class Change {
 		onRollback();
 	}
 
-	protected abstract void onCommit();
 	protected abstract void onRollback();
 
 	public static class Insert extends Change {
 		public Insert(final Node n, final Fact t) {
 			super(Type.INSERT, n, t);
-		}
-
-		@Override
-		protected void onCommit() {
-			// Nothing to do here
 		}
 		
 		@Override
@@ -60,11 +52,6 @@ public abstract class Change {
 	public static class Delete extends Change {
 		public Delete(final Node n, final Fact t) {
 			super(Type.DELETE, n, t);
-		}
-
-		@Override
-		protected void onCommit() {
-			// Nothing to do here
 		}
 
 		@Override
