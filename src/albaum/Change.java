@@ -10,7 +10,7 @@
     GNU General Public License for more details.
  */
 
-package c4l;
+package albaum;
 
 public abstract class Change {
 	public enum Type {INSERT, DELETE};

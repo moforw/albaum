@@ -10,7 +10,7 @@
     GNU General Public License for more details.
 */
 
-package c4l;
+package albaum;
 
 //TODO add tiling interface
 ///TODO auto adjust nr of cols in global grid layout

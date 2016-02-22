@@ -10,18 +10,8 @@
     GNU General Public License for more details.
 */
 
-package c4l;
+package albaum;
 
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.custom.StyledText;
-import org.eclipse.swt.widgets.Composite;
-
-//SWT docs says StyledText is not intented to be subclassed;
-//I'll subclass whatever I feel like, thank you very much.
-
-public class KeyText extends StyledText {
-	public KeyText(Composite parent, int style) {
-		super(parent, SWT.MULTI | style);
-		setWordWrap(true);
-	}
+public interface HasKey {
+	String key();
 }

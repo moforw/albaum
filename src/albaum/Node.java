@@ -10,7 +10,7 @@
     GNU General Public License for more details.
 */
 
-package c4l;
+package albaum;
 
 import java.io.PrintStream;
 import java.time.Instant;

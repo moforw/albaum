@@ -10,7 +10,7 @@
     GNU General Public License for more details.
 */
 
-package c4l;
+package albaum;
 
 import static org.junit.Assert.*;
 

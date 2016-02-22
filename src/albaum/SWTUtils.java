@@ -1,4 +1,4 @@
-package c4l;
+package albaum;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionEvent;
@@ -9,7 +9,7 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
 
-import c4l.GUI.Callback;
+import albaum.GUI.Callback;
 
 public final class SWTUtils {
 	public static MenuItem addMenuItem(final Menu m, final String l, 
