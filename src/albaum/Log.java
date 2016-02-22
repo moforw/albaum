@@ -50,16 +50,15 @@ public class Log {
 	public void commitFact(final Fact f, final Change.Type ct, final JsonGenerator json, final boolean recursive) {		
 		json
 			.write("key", f.key)
-			.write("createdAt", context.formatJS(f.createdAt))
-			.write("version", f.version);	
+			.write("createdAt", context.formatJS(f.createdAt));
 		
 		switch(ct) {
 			case DELETE: {
 				json.write("deleted", true);
-				json.writeNull("previousVersion");
 				break;
 			}			
 			case INSERT: {
+				json.write("version", f.version);	
 				if (!recursive || f.previousVersion == null) {
 					json.writeNull("previousVersion");
 				} else {
