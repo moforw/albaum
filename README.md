@@ -7,7 +7,7 @@ Albaum is kind of like a todo list, sort of like a wiki, a bit like Google; but 
 I had an itch to scratch, the itch of not finding a good place to put my todo lists, diaries, notes, links, passwords and other stuff I want to keep track of.
 
 ## How
-You currently need to run a 64 bit Linux and have Java 8 installed to run Albaum. More platforms will be added as soon as I manage to find a sane way of doing multi platform Java builds. javax.swing deserves to die, I'd rather poke my eyes out and eat them; so SWT it is. Download the [Linux](https://github.com/moforw/albaum/blob/master/AlbaumLinux.jar?raw=true), or [Macos](https://github.com/moforw/albaum/blob/master/AlbaumMacos.jar?raw=true) version; put it in it's own folder somewhere and launch it. If right/double clicking it doesn't work, launching from a shell with 'java -jar Albaum.jar' will give you an error message describing the reason.
+You need to have Java 8 installed to run Albaum. Download the [Linux](https://github.com/moforw/albaum/blob/master/AlbaumLinux.jar?raw=true), or [Macos](https://github.com/moforw/albaum/blob/master/AlbaumMacos.jar?raw=true) version; put it in it's own folder somewhere and launch it. If right/double clicking it doesn't work, launching from a shell with 'java -jar Albaum.jar' will give you an error message describing the reason.
 
 ## Interface
 The main interface consists of a reader, a tree viewer and a flash viewer; top to bottom. Ctrl|X takes you out of there instantly.
